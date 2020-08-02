@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-02T09:32:43.236Z",
+    "end": "2020-08-02T09:32:48.308Z",
+    "duration": 5072,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "982ec3be-b79f-43b4-b4f0-77afacc37eb7",
+      "title": "",
+      "fullFile": "cypress/integration/UserRegistration/TC03_Searchwomen.spec.js",
+      "file": "cypress/integration/UserRegistration/TC03_Searchwomen.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e13ff443-c37d-432d-bf5a-526285dbcb42",
+          "title": "Women section",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should open the women tab",
+              "fullTitle": "Women section should open the women tab",
+              "timedOut": null,
+              "duration": 4779,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ul.sf-menu li').eq(0).click();\ncy.url().should('include', 'id_category=3');",
+              "err": {},
+              "uuid": "72b054ad-203b-4fcd-96e0-5329d891f607",
+              "parentUUID": "e13ff443-c37d-432d-bf5a-526285dbcb42",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have 2 subcategories",
+              "fullTitle": "Women section should have 2 subcategories",
+              "timedOut": null,
+              "duration": 38,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div#subcategories ul > li').should('have.length', '2');",
+              "err": {},
+              "uuid": "02459147-92ee-4b9c-b4d0-6b5abcc392b6",
+              "parentUUID": "e13ff443-c37d-432d-bf5a-526285dbcb42",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check for first item in the list",
+              "fullTitle": "Women section should check for first item in the list",
+              "timedOut": null,
+              "duration": 35,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('ul.product_list > li').eq(0).contains('Faded Short Sleeve T-shirts');",
+              "err": {},
+              "uuid": "d795e6db-8dda-4252-a291-dedc503c9aaa",
+              "parentUUID": "e13ff443-c37d-432d-bf5a-526285dbcb42",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "sort by name and check first item",
+              "fullTitle": "Women section sort by name and check first item",
+              "timedOut": null,
+              "duration": 182,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('select#selectProductSort').select('name:asc');",
+              "err": {},
+              "uuid": "a884647d-3dee-473f-b138-70ebbb85c4cb",
+              "parentUUID": "e13ff443-c37d-432d-bf5a-526285dbcb42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "72b054ad-203b-4fcd-96e0-5329d891f607",
+            "02459147-92ee-4b9c-b4d0-6b5abcc392b6",
+            "d795e6db-8dda-4252-a291-dedc503c9aaa",
+            "a884647d-3dee-473f-b138-70ebbb85c4cb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5034,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

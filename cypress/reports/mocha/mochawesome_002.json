@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-02T09:32:18.287Z",
+    "end": "2020-08-02T09:32:39.612Z",
+    "duration": 21325,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e33e9510-3bf3-4b2c-ad1b-b7610c1df49c",
+      "title": "",
+      "fullFile": "cypress/integration/UserRegistration/TC02_Userregister.spec.js",
+      "file": "cypress/integration/UserRegistration/TC02_Userregister.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ed245ea-7f0b-4747-8577-ddf1c0b2047e",
+          "title": "User Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to the Landing Page",
+              "fullTitle": "User Registration Navigate to the Landing Page",
+              "timedOut": null,
+              "duration": 3384,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');",
+              "err": {},
+              "uuid": "5f51457e-15a7-43d7-bfea-132d2ef84636",
+              "parentUUID": "7ed245ea-7f0b-4747-8577-ddf1c0b2047e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click signin button and enter your email to create an account",
+              "fullTitle": "User Registration Click signin button and enter your email to create an account",
+              "timedOut": null,
+              "duration": 5358,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "function Name_Alpha_Email() {\n  var text = \"\";\n  var possible = \"abcdefghijk123456\";\n  for (var i = 0; i < 10; i++) {\n    text += possible.charAt(Math.floor(Math.random() * possible.length));\n  }\n  return text + \"@gmail.com\";\n}\ncy.wait(3000);\ncy.get('a.login').click();\nvar randomEmail = Name_Alpha_Email();\ncy.get('#email_create').type(randomEmail);\ncy.get('#SubmitCreate').click();",
+              "err": {},
+              "uuid": "73dcc6b9-92b5-4f2e-a003-5ffd553cd749",
+              "parentUUID": "7ed245ea-7f0b-4747-8577-ddf1c0b2047e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill Personal Information and click register button",
+              "fullTitle": "User Registration Fill Personal Information and click register button",
+              "timedOut": null,
+              "duration": 12540,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('[type=\"radio\"]').first().check();\ncy.get('#customer_firstname').type('Timmy');\ncy.get('#customer_lastname').type('Gordon');\ncy.wait(3000);\ncy.get('#passwd').type('Allstar27');\ncy.get('#days').select('11');\ncy.get('#months').select('April');\ncy.get('#years').select('2000');\ncy.get('#address1').type('45 Mount Street');\ncy.get('#city').type('Anchorage');\ncy.wait(2000); //cy.get('#account-creation_form > .account_creation > .required > #uniform-id_state > #id_state').click()\ncy.get('#id_state.form-control').select('Alaska').should('have.value', '2');\ncy.get('#postcode').type('99501');\ncy.get('#id_country').select('United States');\ncy.get('#phone_mobile').type('907-923-0427');\ncy.get('#alias').type('46 Mount Street');\ncy.get('#submitAccount').click();",
+              "err": {},
+              "uuid": "b41da605-04a2-49b9-a1b7-c3aa5be3c9d8",
+              "parentUUID": "7ed245ea-7f0b-4747-8577-ddf1c0b2047e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f51457e-15a7-43d7-bfea-132d2ef84636",
+            "73dcc6b9-92b5-4f2e-a003-5ffd553cd749",
+            "b41da605-04a2-49b9-a1b7-c3aa5be3c9d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21282,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

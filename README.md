@@ -7,7 +7,7 @@ automationpractice.com test was developed using `Cypress` End-To-End(E2E) testin
 
 ## Installation and Setup
 
-1. Clone the repository 
+1. Clone the repository https://github.com/legzy27/Beamery-E2E-Test.git
 2. Once you download the repository cd into the directory 
 3. Install necessary dependencies with `npm install` command before the cypress E2E tests can run locally
 4. To launch the test locally use the command `npx cypress open` this will launch the cypress  window 
@@ -19,4 +19,7 @@ automationpractice.com test was developed using `Cypress` End-To-End(E2E) testin
 * Used a page object model(POM) in the E2E test framework
 
 
-## Issue user registeration authentication error message
+## Issue 
+ * User is on the authentication page, fill the form and click register button
+ * User will see "There is 1 error This country requires you to choose a State."
+ * Selected state from the dropdown list disappear when the user click register button
