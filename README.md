@@ -1,6 +1,6 @@
 ##  AutomationPractice E2E Test
 
-automationpractice.com  autoamted test was developed using `Cypress` End-To-End(E2E) testing framework tool
+automationpractice.com  automation test framework was developed using `Cypress` End-To-End(E2E) testing framework tool
 `https://www.cypress.io/`
 
 
@@ -16,10 +16,11 @@ automationpractice.com  autoamted test was developed using `Cypress` End-To-End(
 6. To view test report open reports folder, click on mochareports folder, right click assets folder and reveal in finder, click to open report.html file to view report
 
 ## Note
-* Page object model(POM) was used in the E2E test framework
+* Page object model(POM) was used in the E2E test automation framework
 
 
 ## Issue With User Register Automated Test
  * User is on the authentication page, fill the form and click register button
  * User will see "There is 1 error This country requires you to choose a State."
  * Selected state from the dropdown list disappear when the user click register button
+ * This process works manaully
