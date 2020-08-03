@@ -50,7 +50,7 @@ describe("User Registration", function () {
         cy.get('#phone_mobile').type('907-923-0427')
         cy.get('#alias').clear()
         .type('46 Mount Street')
-         cy.get('#submitAccount').click()
+        cy.get('#submitAccount').click()
 
     })
 
