@@ -1,4 +1,3 @@
-
 it('User log in account page', () => {
     cy.visit('http://automationpractice.com/index.php')
     cy.contains('a', 'Sign in').click()
