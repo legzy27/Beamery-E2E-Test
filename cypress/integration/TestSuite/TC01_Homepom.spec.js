@@ -1,9 +1,9 @@
-import UserRegistration from '../PageObjects/Home'
+import TestSuite from '../PageObjects/Home'
 
 
 describe("HomePage", function () {
 
-    const home = new UserRegistration()
+    const home = new TestSuite()
 
     it('Testing the home page for automationpractice ', function () {
         home.visit()

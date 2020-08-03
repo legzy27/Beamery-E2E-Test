@@ -39,32 +39,23 @@ describe("User Registration", function () {
         cy.get('#city').type('Anchorage')
         cy.wait(3000)
 
-     
-
-    
-        
-        //cy.get('#account-creation_form > .account_creation > .required > #uniform-id_state > #id_state').click()
- 
-        cy.get('#id_state')
-        .select('Alaska', {force: true})
-        .invoke('val')
-        .should('eq', '2')
-
-
-    
+        cy.get('[name="id_state"]').select('Alaska', {force: true})
+        cy.get('option').contains('Alaska').then(option => {
+        cy.wrap(option).contains('Alaska');
+        option[0].click();
 
         cy.wait(3000)
-        
         cy.get('#postcode').type('99501')
         cy.get('#id_country').select('United States')
         cy.get('#phone_mobile').type('907-923-0427')
         cy.get('#alias').clear()
         .type('46 Mount Street')
-        cy.get('#submitAccount').click()
+         cy.get('#submitAccount').click()
 
     })
 
 
 })
 
+})
 
